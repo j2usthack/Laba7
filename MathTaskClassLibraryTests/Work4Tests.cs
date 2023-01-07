@@ -9,7 +9,7 @@ namespace MathTaskClassLibraryTests
         [TestMethod]
         public void EmailCheckTest()
         {
-            string email = "sda@sd.com";
+            string email = "sda@sdaa.com";
             bool expected = true;
 
             Work4 w4 = new Work4();

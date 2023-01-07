@@ -14,19 +14,20 @@ namespace MathTaskClassLibrary
             _b = b;
             _c = c;
         }
-        private double D => Math.Pow(_b, 2) - (4 * _a * _c);
         public double[] Solve()
         {
-            if (D < 0)
+            double d = (_b * _b) - (4 * _a * _c);
+
+            if (d < 0)
             {
                 return new double[0];
             }
-            double x1 = (-_b + Math.Sqrt(D)) / (2 * _a);
-            if (D == 0)
+            double x1 = Math.Round((-_b + Math.Sqrt(d)) / (2 * _a), 2);
+            if (d == 0)
             {
                 return new double[1] { x1 };
             }
-            double x2 = (-_b - Math.Sqrt(D)) / (2 * _a);
+            double x2 = Math.Round((-_b - Math.Sqrt(d)) / (2 * _a), 2);
             return new double[2] { x1, x2 };
         }
     }

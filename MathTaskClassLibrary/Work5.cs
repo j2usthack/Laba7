@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace MathTaskClassLibrary
 {
@@ -6,11 +7,15 @@ namespace MathTaskClassLibrary
     {
         public int Calculate(string num)
         {
-            if (!int.TryParse(num, out int res))
+            return num.Sum(x => ToInt32(x));
+        }
+        private int ToInt32(char value)
+        {
+            if (int.TryParse(value.ToString(), out int res))
             {
-                throw new InvalidOperationException("Строка не была числом");
+                return res;
             }
-            return res + res;
+            throw new InvalidOperationException("Невозможно конвертировать");
         }
     }
 }

@@ -9,8 +9,8 @@ namespace MathTaskClassLibraryTests
         [TestMethod]
         public void CalculateTest()
         {
-            string num = "6";
-            int expected = 12;
+            string num = "623";
+            int expected = 11;
 
             Work5 w5 = new Work5();
             int actual = w5.Calculate(num);

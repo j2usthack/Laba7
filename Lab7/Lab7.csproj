@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MathTaskClassLibrary\MathTaskClassLibrary.csproj">
+      <Project>{3caae8f5-c94b-4e5c-966c-8120f8180a00}</Project>
+      <Name>MathTaskClassLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
